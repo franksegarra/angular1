@@ -1,0 +1,17 @@
+<H2>{{ repo.name }}</H2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="subscriber in subscribers | orderBy:subSortOrder">
+      <th>{{subscriber.name}}</th>
+    </tr>
+  </tbody>
+</table>
+
+<a href="#/main">Back to search</a>
+<a href="#/user/{{repo.owner.login}}">Back to {{repo.owner.login}}</a>
